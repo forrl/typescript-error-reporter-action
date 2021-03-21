@@ -1,29 +1,25 @@
-const path = require('path')
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   mode: 'production',
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js'
+    filename: 'index.js',
   },
   target: 'node',
   module: {
     rules: [
-        {
-            test: /\.tsx?$/,
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true
-            }
-        }
-    ]
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true,
+        },
+      },
+    ],
   },
   resolve: {
-    extensions: [ '.ts', '.tsx', '.js' ]
+    extensions: ['.ts', '.tsx', '.js'],
   },
-  plugins: [
-    new HardSourceWebpackPlugin()
-  ]
-}
+};

@@ -3,20 +3,13 @@
     "target": "esnext",
     "module": "commonjs",
     "strict": true,
-    "types": [
-      "node"
-    ],
-    "lib": [
-      "ES2017"
-    ],
+    "types": ["node"],
+    "lib": ["ES2017"],
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": "lib"
+    "outDir": "lib",
+    "declaration": false
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

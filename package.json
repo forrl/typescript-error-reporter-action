@@ -1,7 +1,7 @@
 {
   "name": "typescript-error-reporter-action",
   "version": "1.1.0",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "author": "andoshin11 <shinglish11@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -13,18 +13,18 @@
   },
   "homepage": "https://github.com/gozala/typescript-error-reporter-action#readme",
   "scripts": {
-    "build": "ncc build --out dist/index.js",
+    "build": "webpack",
     "watch": "tsc -w",
     "clean": "rm -rf lib",
     "test:type": "tsc --noEmit --incremental false"
   },
   "devDependencies": {
+    "@actions/core": "^1.2.6",
     "@types/glob": "^7.1.3",
     "@types/node": "^14.11.8",
-    "@vercel/ncc": "^0.27.0",
-    "typescript": "^4.0.3"
-  },
-  "dependencies": {
-    "@actions/core": "^1.2.6"
+    "ts-loader": "^8.0.18",
+    "typescript": "^4.0.3",
+    "webpack": "^5.27.1",
+    "webpack-cli": "^4.5.0"
   }
 }
