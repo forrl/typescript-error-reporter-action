@@ -1,6 +1,6 @@
 {
   "name": "typescript-error-reporter-action",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "author": "andoshin11 <shinglish11@gmail.com>",
   "license": "MIT",
